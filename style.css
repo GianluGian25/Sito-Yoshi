@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 40px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.header-right {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.header-center {
+    text-align: center;
+}
