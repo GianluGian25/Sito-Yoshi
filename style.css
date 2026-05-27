@@ -1,4 +1,4 @@
-
+/* Reset iniziale dei margini */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
     display: block;
     position: relative;
@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-
+/* Contenitore dell'immagine principale al centro */
 .main-product-container {
     position: absolute;
     top: 50%;
@@ -32,31 +32,29 @@ body {
     object-fit: contain;
 }
 
-
+/* --- WIDGET IN BASSO A DESTRA --- */
 .gallery-carousel {
     position: fixed;
     bottom: 24px;
     right: 24px;
     display: block;
-    background-color: rgba(255, 255, 255, 0.85); 
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 6px 10px;
     border-radius: 4px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     user-select: none;
-    white-space: nowrap; 
+    white-space: nowrap;
     z-index: 1000;
 }
 
-
+/* Contenitore miniature */
 .thumbnails-wrapper {
     display: inline-block;
     vertical-align: middle;
-    max-width: 220px; 
-    overflow-x: hidden;
-    scroll-behavior: smooth;
     white-space: nowrap;
 }
 
+/* Stile delle miniature */
 .thumb-item {
     display: inline-block;
     width: 40px;
@@ -70,12 +68,11 @@ body {
     vertical-align: middle;
 }
 
-
 .thumb-item:hover, .thumb-item.active {
     border-color: #000000;
 }
 
-
+/* Quadratino "+3" */
 .more-photos {
     display: inline-flex;
     width: 40px;
@@ -91,7 +88,7 @@ body {
     margin-right: 10px;
 }
 
-
+/* Le freccette tonde (< e >) che ora cambiano la foto */
 .nav-arrow {
     display: inline-flex;
     width: 26px;
