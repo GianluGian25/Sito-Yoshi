@@ -24,3 +24,21 @@
 .header-center {
     text-align: center;
 }
+.body{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    overflow: clip;
+}
+.body img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 5px;
+    transition: all .8s ease-in-out;
+
+}
+body img:hover{
+    flex-grow: 1;
+}
