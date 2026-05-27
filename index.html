@@ -9,41 +9,66 @@
 <body>
 
     <div class="main-product-container">
-        <img id="main-product-img" src="OP.jpg" alt="Prodotto">
+        <img id="main-product-img" src="OIP.png" alt="Prodotto">
     </div>
 
     <div class="gallery-carousel">
         
         <div class="thumbnails-wrapper" id="thumb-wrapper">
-            <img class="thumb-item active" src="OIP.png" onclick="changeImage(this)">
-            <img class="thumb-item" src="OP.jpg" onclick="changeImage(this)">
-            <img class="thumb-item" src="OP.jpg" onclick="changeImage(this)">
-            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
-            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
+            <img class="thumb-item active" src="OIP.png" onclick="selectImage(0)">
+            <img class="thumb-item" src="OP.jpg" onclick="selectImage(1)">
+            <img class="thumb-item" src="OIP.png" onclick="selectImage(2)">
+            <img class="thumb-item" src="OP.jpg" onclick="selectImage(3)">
+            <img class="thumb-item" src="OIP.png" onclick="selectImage(4)">
         </div>
 
         <div class="more-photos">+3</div>
 
-        <div class="nav-arrow" onclick="scrollThumbs(-50)">&lt;</div>
+        <div class="nav-arrow" onclick="navigateImage(-1)">&lt;</div>
         
-        <div class="nav-arrow" onclick="scrollThumbs(50)">&gt;</div>
+        <div class="nav-arrow" onclick="navigateImage(1)">&gt;</div>
     </div>
 
     <script>
-        function changeImage(element) {
-            document.getElementById('main-product-img').src = element.src;
-            
-            
-            let thumbnails = document.querySelectorAll('.thumb-item');
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
-            
-        
-            element.classList.add('active');
+        // Variabile per tenere traccia della foto corrente
+        let currentImageIndex = 0;
+
+        // Quando clicchi direttamente su una miniatura
+        function selectImage(index) {
+            currentImageIndex = index;
+            updateGallery();
         }
 
-        function scrollThumbs(direction) {
-            const wrapper = document.getElementById('thumb-wrapper');
-            wrapper.scrollLeft += direction;
+        // Quando clicchi sulle freccette tonde (< o >)
+        function navigateImage(direction) {
+            let thumbnails = document.querySelectorAll('.thumb-item');
+            
+            // Calcola il nuovo indice
+            currentImageIndex += direction;
+
+            // Se vai oltre l'ultima foto, ricomincia dalla prima (0)
+            if (currentImageIndex >= thumbnails.length) {
+                currentImageIndex = 0;
+            } 
+            // Se vai sotto lo zero, salta all'ultima foto
+            else if (currentImageIndex < 0) {
+                currentImageIndex = thumbnails.length - 1;
+            }
+
+            updateGallery();
+        }
+
+        // Funzione per aggiornare la foto grande e i bordini delle miniature
+        function updateGallery() {
+            let thumbnails = document.querySelectorAll('.thumb-item');
+            let mainImg = document.getElementById('main-product-img');
+            
+            // Aggiorna la sorgente della foto principale
+            mainImg.src = thumbnails[currentImageIndex].src;
+            
+            // Rimuove la classe active da tutte e la mette solo su quella corrente
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnails[currentImageIndex].classList.add('active');
         }
     </script>
 
