@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <title>PAGINA PRINCIPALE</title>
-    <head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria Prodotto Stile Gucci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    </body>
-<html>
+    <div class="main-product-container">
+        <img id="main-product-img" src="OIP.png" alt="Prodotto">
+    </div>
 
+    <div class="gallery-carousel">
+        
+        <div class="thumbnails-wrapper" id="thumb-wrapper">
+            <img class="thumb-item active" src="OIP.png" onclick="changeImage(this)">
+            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
+            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
+            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
+            <img class="thumb-item" src="OIP.png" onclick="changeImage(this)">
+        </div>
 
+        <div class="more-photos">+3</div>
 
+        <div class="nav-arrow" onclick="scrollThumbs(-50)">&lt;</div>
+        
+        <div class="nav-arrow" onclick="scrollThumbs(50)">&gt;</div>
+    </div>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('main-product-img').src = element.src;
+            
+            
+            let thumbnails = document.querySelectorAll('.thumb-item');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+        
+            element.classList.add('active');
+        }
+
+        function scrollThumbs(direction) {
+            const wrapper = document.getElementById('thumb-wrapper');
+            wrapper.scrollLeft += direction;
+        }
+    </script>
+
+</body>
+</html>
