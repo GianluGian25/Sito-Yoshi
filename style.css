@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    background-color: rgb(13, 103, 182);
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    width: 100%;
+    padding: 10px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+.raccogli-icone{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.icone{
+    padding-left: 5px;
+}
