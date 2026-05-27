@@ -1,4 +1,4 @@
-/* Reset iniziale dei margini */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -15,7 +15,6 @@ body {
     overflow: hidden;
 }
 
-/* Contenitore dell'immagine principale al centro */
 .main-product-container {
     position: absolute;
     top: 50%;
@@ -32,7 +31,6 @@ body {
     object-fit: contain;
 }
 
-/* --- WIDGET IN BASSO A DESTRA --- */
 .gallery-carousel {
     position: fixed;
     bottom: 24px;
@@ -47,14 +45,12 @@ body {
     z-index: 1000;
 }
 
-/* Contenitore miniature */
 .thumbnails-wrapper {
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
 }
 
-/* Stile delle miniature */
 .thumb-item {
     display: inline-block;
     width: 40px;
@@ -72,7 +68,6 @@ body {
     border-color: #000000;
 }
 
-/* Quadratino "+3" */
 .more-photos {
     display: inline-flex;
     width: 40px;
@@ -88,7 +83,6 @@ body {
     margin-right: 10px;
 }
 
-/* Le freccette tonde (< e >) che ora cambiano la foto */
 .nav-arrow {
     display: inline-flex;
     width: 26px;

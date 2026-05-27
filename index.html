@@ -30,27 +30,22 @@
     </div>
 
     <script>
-        // Variabile per tenere traccia della foto corrente
         let currentImageIndex = 0;
 
-        // Quando clicchi direttamente su una miniatura
         function selectImage(index) {
             currentImageIndex = index;
             updateGallery();
         }
 
-        // Quando clicchi sulle freccette tonde (< o >)
         function navigateImage(direction) {
             let thumbnails = document.querySelectorAll('.thumb-item');
             
-            // Calcola il nuovo indice
+           
             currentImageIndex += direction;
 
-            // Se vai oltre l'ultima foto, ricomincia dalla prima (0)
             if (currentImageIndex >= thumbnails.length) {
                 currentImageIndex = 0;
             } 
-            // Se vai sotto lo zero, salta all'ultima foto
             else if (currentImageIndex < 0) {
                 currentImageIndex = thumbnails.length - 1;
             }
@@ -58,15 +53,12 @@
             updateGallery();
         }
 
-        // Funzione per aggiornare la foto grande e i bordini delle miniature
         function updateGallery() {
             let thumbnails = document.querySelectorAll('.thumb-item');
             let mainImg = document.getElementById('main-product-img');
             
-            // Aggiorna la sorgente della foto principale
             mainImg.src = thumbnails[currentImageIndex].src;
             
-            // Rimuove la classe active da tutte e la mette solo su quella corrente
             thumbnails.forEach(thumb => thumb.classList.remove('active'));
             thumbnails[currentImageIndex].classList.add('active');
         }
