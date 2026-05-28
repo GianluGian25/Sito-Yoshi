@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+
+
+
 .header {
     width: 100%;
     background-color: rgb(13, 103, 182);
@@ -13,21 +16,90 @@
     justify-content: center;
 }
 
-.navbar {
-    width: 100%;
-    padding: 10px;
-    height: 55px;
+.nav-sinistra{
+    flex:1;
+    justify-content:flex-start;
+    
+}
+
+.nav-centro{
+    justify-content: center;
+    flex:1;
+    text-align: center;
+}
+
+.nav-destra {
+    flex: 1;
+    justify-content:flex-end;
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255);
+    gap: 15px;
+
 }
 
-.sfondo {
-    background-color: black;
-    height: 100vh
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 40px;
+    height: 64px;
+    width: 100%;
+
+   
+    background: transparent;
+    border-bottom: 1px solid transparent;
+
+    transition: background 0.35s ease, box-shadow  0.35s ease, border-color 0.35s ease;
 }
 
-.contenitore-prova {
+.navbar > p {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.35s;
+}
+
+.navbar.scrolled {
+    background: #ffffff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+.navbar.scrolled > p {
+    color: #1a1a2e;
+}
+
+.material-icons {
+  font-size: 24px;      /* Cambia la dimensione */
+  cursor: pointer;      /* Fa apparire la manina al passaggio del mouse */
+  vertical-align: middle;
+  transition: color 0.4s ease; /* Transizione fluida del colore */
+  
+}
+
+.navbar .material-icons {
+  color: white;
+}
+
+.navbar.scrolled .material-icons{
+    color: black;
+}
+
+.immagine-sfondo {
+  background-image: url('img/prova\ immagine.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -64px;
+  padding-top: 64px; 
+}
+
+
+/*.contenitore-prova {
     border: 2px solid white;
     font-size: 50px;
     display: flex;
@@ -36,7 +108,7 @@
     margin: 20px;
     text-align: center;
 }
-
+*/
 .contenitore-prova p {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,17 +124,6 @@
     color: white;
     font-size: 125px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.raccogli-icone {
-    display: flex;
-    flex-direction: row;
-
-
-}
-
-.icone {
-    padding-left: 5px;
 }
 
 .footer {
@@ -85,14 +146,13 @@
     border: 1px solid white;
     padding-right: 50px;
     padding: 20px;
-    flexdirection: column;
+    flex-direction: column;
     color: grey;
 }
 
-p2 {
-    font-family: futura, sans-serif;    
+.Tabella1 > p {
+    font-family: sans-serif;    
     font-size: 15px;
     color: white;
-    margin: 10px;
-    
+    margin: 15px;
 }
