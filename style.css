@@ -16,9 +16,24 @@
 .navbar{
     width: 100%;
     padding: 10px;
-    height: fit-content;
+    height: 55px;
     display: flex;
     justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+}
+.sfondo{
+    background-color: black;
+    height: 100vh
+
+}
+.contenitore-prova{
+    border: 2px solid white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 20px;
+    text-align: center;
 }
 
 .raccogli-icone{
