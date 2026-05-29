@@ -4,39 +4,38 @@
     box-sizing: border-box;
 }
 
-
-
-
 .header {
     width: 100%;
-    background-color: rgb(13, 103, 182);
+    background-color: rgb(0, 0, 0);
     height: fit-content;
     padding: 5px;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
-.nav-sinistra{
-    flex:1;
-    justify-content:flex-start;
-    
+/*Navbar*/
+.nav-sinistra {
+    flex: 1;
+    justify-content: flex-start;
+
 }
 
-.nav-centro{
+.nav-centro {
     justify-content: center;
-    flex:1;
+    flex: 1;
     text-align: center;
 }
 
 .nav-destra {
     flex: 1;
-    justify-content:flex-end;
+    justify-content: flex-end;
     display: flex;
     gap: 15px;
 
 }
 
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
     z-index: 999;
@@ -49,14 +48,14 @@
     height: 64px;
     width: 100%;
 
-   
+
     background: transparent;
     border-bottom: 1px solid transparent;
 
-    transition: background 0.35s ease, box-shadow  0.35s ease, border-color 0.35s ease;
+    transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.navbar > p {
+.navbar>p {
     color: #ffffff;
     font-size: 15px;
     font-weight: 500;
@@ -69,33 +68,38 @@
     border-bottom-color: rgba(0, 0, 0, 0.06);
 }
 
-.navbar.scrolled > p {
+.navbar.scrolled>p {
     color: #1a1a2e;
 }
 
 .material-icons {
-  font-size: 24px;      /* Cambia la dimensione */
-  cursor: pointer;      /* Fa apparire la manina al passaggio del mouse */
-  vertical-align: middle;
-  transition: color 0.4s ease; /* Transizione fluida del colore */
-  
+    font-size: 24px;
+    /* Cambia la dimensione */
+    cursor: pointer;
+    /* Fa apparire la manina al passaggio del mouse */
+    vertical-align: middle;
+    transition: color 0.4s ease;
+    /* Transizione fluida del colore */
+
 }
 
 .navbar .material-icons {
-  color: white;
+    color: white;
 }
 
-.navbar.scrolled .material-icons{
+.navbar.scrolled .material-icons {
     color: black;
 }
 
+/*FINE Navbar*/
+
 .immagine-sfondo {
-  background-image: url('img/prova\ immagine.webp');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin-top: -64px;
-  padding-top: 64px; 
+    background-image: url('img/prova\ immagine.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: -64px;
+    padding-top: 64px;
 }
 
 
@@ -120,39 +124,123 @@
     justify-content: center;
     height: 25vh;
     background-color: rgb(0, 0, 0);
+    border: 2px solid white;
     text-align: center;
     color: white;
     font-size: 125px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.footer {
-    background-color: rgb(0, 0, 0);
-    height: 80vh;
-    display: flex;
-    border-top: 1px solid white;
-    color: white;
-    font-size: 25px;
-    margin: 0px;
-}
-
-.Tabella1 {
+            /*FAQ*/
+.faq {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     align-items: center;
-    height: 90%;
-    margin-left: 20px;
-    border: 1px solid white;
-    padding-right: 50px;
-    padding: 20px;
-    flex-direction: column;
-    color: grey;
+    gap: 20px;
+    padding: 40px 20px;
+    color: white;
+    background-color: rgb(0, 0, 0);
 }
 
-.Tabella1 > p {
-    font-family: sans-serif;    
-    font-size: 15px;
-    color: white;
-    margin: 15px;
+/* FOOTER */
+.footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 60px 48px;
 }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+}
+
+.footer-titolo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.5);
+    /* grigio chiaro */
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-col ul a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+    text-underline-offset: 3px;
+}
+
+.footer-col ul a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Input con freccia ── */
+.footer-input-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 8px;
+    gap: 24px;
+}
+
+.footer-input-row input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-input-row input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-input-row span {
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ── Testo descrittivo ── */
+.footer-desc {
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* ── Select lingua ── */
+.footer-select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 4px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ── Link con sottolineatura (Italia) ── */
+.footer-link-underline {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-link-underline:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+/*fine del FOOTER*/
