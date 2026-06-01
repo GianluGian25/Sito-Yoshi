@@ -2,16 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Per le diverse pagine*/
+.Sfondo {
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: -64px;
+    padding-top: 64px;
+    color: white;
+    text-align: center;
+}
+
+.Sfondo h1 {
+    margin-top: 20%;
 }
 
 .header {
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     height: fit-content;
     padding: 5px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /*Navbar*/
@@ -94,7 +111,7 @@
 /*FINE Navbar*/
 
 .immagine-sfondo {
-    background-image: url('img/prova\ immagine.webp');
+    background-image: url('img/New\ Project.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -115,22 +132,37 @@
 */
 .contenitore-prova p {
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'montserrat', sans-serif;
     justify-content: center;
 }
 
 .ZURORA-LOGO-CONTAINER {
     display: flex;
     justify-content: center;
-    height: 25vh;
+    height: fit-content;
     background-color: rgb(0, 0, 0);
     border: 2px solid white;
     text-align: center;
     color: white;
     font-size: 125px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
-            /*FAQ*/
+
+.logo-section {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    height: fit-content;
+}
+
+.logo-svg {
+    width: 100%;
+    height: fit-content;
+}
+
+/*FAQ*/
 .faq {
     display: flex;
     flex-direction: column;
@@ -139,6 +171,58 @@
     padding: 40px 20px;
     color: white;
     background-color: rgb(0, 0, 0);
+}
+
+/*Messagggio*/
+.Messaggio-banner {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Messaggio-box {
+    background-color: #000000;
+    max-width: 1100px;
+    width: 100%;
+    padding: 60px 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+/* ── Piccola scritta in alto ── */
+.Messaggio-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+}
+
+/* ── Testo grande centrale ── */
+.Messaggio-testo {
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+/* ── Bottone Iscriviti ── */
+.Messaggio-btn {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.Messaggio-btn:hover {
+    color: #ffffff;
 }
 
 /* FOOTER */
@@ -152,6 +236,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start
 }
 
 .footer-titolo {
@@ -232,6 +319,11 @@
     cursor: pointer;
 }
 
+.footer-select option {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 /* ── Link con sottolineatura (Italia) ── */
 .footer-link-underline {
     color: #ffffff;
@@ -243,4 +335,5 @@
 .footer-link-underline:hover {
     color: rgba(255, 255, 255, 0.6);
 }
+
 /*fine del FOOTER*/
