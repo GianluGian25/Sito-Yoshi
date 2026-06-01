@@ -157,6 +157,10 @@
     height: fit-content;
 }
 
+.a {
+    fill: #fff
+}
+
 .logo-svg {
     width: 100%;
     height: fit-content;
