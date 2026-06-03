@@ -5,12 +5,7 @@
     font-family: futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
-    text-decoration: none;
-}
+
 
 /*Per le diverse pagine*/
 .Sfondo {
@@ -29,9 +24,6 @@ a:active {
     padding: 20px;
     border-bottom: 2px solid #1c1c1c;
     margin: 0;
-}
-
-Sfondo h2 {
 }
 
 .header {
@@ -178,14 +170,19 @@ Sfondo h2 {
 
 
 
-.login-anteprima>p {
-    padding-top: 3px;
-    padding-bottom: 3px;
+.login-anteprima > ul > li > a {
+    padding: 3px 0;
+    display: block;
+    
+    text-decoration:none;
+    color: black;
 }
 
-.lingue-anteprima>p {
-    padding-top: 3px;
-    padding-bottom: 3px;
+.lingue-anteprima > ul > li > a {
+    padding: 3px 0;
+    display:block;
+    text-decoration:none;
+    color: black;
 }
 
 .cont-icone:hover .carrello-anteprima {
