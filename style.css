@@ -45,7 +45,7 @@
     
 }
 .nav-logo{
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
@@ -73,7 +73,7 @@
 
 
     background: transparent;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid #1c1c1c;
     transition: background 1.0s ease, box-shadow 1.0s ease, border-color 1.0s ease;
 
 }
@@ -101,13 +101,55 @@
 
 .material-icons {
     font-size: 24px;
-    /* Cambia la dimensione */
+    
     cursor: pointer;
-    /* Fa apparire la manina al passaggio del mouse */
-    vertical-align: middle;
+    
+    
     transition: color 0.4s ease;
-    /* Transizione fluida del colore */
+    
 
+}
+
+.cont-carrello {
+    position: relative;
+}
+
+
+
+.carrello-anteprima {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: grey;
+    color: black;
+    width: 240px;
+    padding:20px;
+    height: auto;
+    border: 3px solid #9d9d9d;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+
+}
+
+.cont-carrello:hover .carrello-anteprima {
+    color:#000000;
+}
+
+.cont-carrello:hover .carrello-anteprima {
+    display: block;
+
+}
+
+.carrello-anteprima::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
 }
 
 .navbar .material-icons {
