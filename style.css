@@ -5,11 +5,19 @@
     font-family: futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 /*Per le diverse pagine*/
 .Sfondo {
     background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
+    flex-direction: column;
     height: 100vh;
     margin-top: -64px;
     padding-top: 64px;
@@ -18,7 +26,12 @@
 }
 
 .Sfondo h1 {
-    margin-top: 20%;
+    padding: 20px;
+    border-bottom: 2px solid #1c1c1c;
+    margin: 0;
+}
+
+Sfondo h2 {
 }
 
 .header {
@@ -46,7 +59,7 @@
 }
 
 .nav-logo {
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 
@@ -142,7 +155,9 @@
     border-radius: 5px;
     z-index: 1000;
     text-align: center;
+
 }
+
 
 .lingue-anteprima {
     display: none;
@@ -343,7 +358,7 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s;
-}   
+}
 
 .Messaggio-btn:hover {
     color: #ffffff;
@@ -466,6 +481,93 @@
     height: auto;
     margin-top: 40px;
     margin-left: -115px;
+}
+
+/* La pagina: STORIA DI ZURORA */
+
+.Sezione-storia {
+    background: #000;
+}
+
+/* Titolo header */
+.storia-header {
+    padding: 90px 48px 40px;
+    text-align: center;
+    border-bottom: 1px solid #1c1c1c;
+    margin-top: -64px;
+}
+
+.storia-titolo {
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* Colonna orizzontale di testo  */
+.storia-contenuto {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 72px 32px 100px;
+}
+
+/*  frase apertura */
+.storia-apertura {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.9;
+    margin-bottom: 48px;
+    letter-spacing: 0.02em;
+}
+
+.storia-apertura span {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+/* paragrafi  */
+.storia-testo {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.95;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+}
+
+/* Frasi importanti in grndee */
+.storia-frase {
+    font-size: clamp(18px, 2.6vw, 26px);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.55;
+    border-left: 1px solid rgba(255,255,255,0.25);
+    padding-left: 24px;
+    margin: 52px 0;
+    letter-spacing: 0.02em;
+}
+
+/* Linea orizzontale per dividere */
+.storia-linea {
+    border: none;
+    border-top: 1px solid #1c1c1c;
+    margin: 52px 0;
+}
+
+/* fine storia::a Benvenuto in Zurora */
+.storia-chiusura {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 52px;
+    border-top: 1px solid #1c1c1c;
+    margin-top: 52px;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 52px;
 }
 
 /*fine del FOOTER*/
