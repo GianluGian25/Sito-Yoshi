@@ -42,9 +42,10 @@
     justify-content: center;
     flex: 1;
     text-align: center;
-    
+
 }
-.nav-logo{
+
+.nav-logo {
     width: 200px;
     height: auto;
 }
@@ -62,16 +63,12 @@
     position: sticky;
     top: 0;
     z-index: 999;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 20px 40px;
     height: 64px;
     width: 100%;
-
-
     background: transparent;
     border-bottom: 2px solid #1c1c1c;
     transition: background 1.0s ease, box-shadow 1.0s ease, border-color 1.0s ease;
@@ -95,22 +92,17 @@
     color: #1a1a2e;
 }
 
-.navbar.scrolled .nav-logo{
-    filter:invert(1);
+.navbar.scrolled .nav-logo {
+    filter: invert(1);
 }
 
 .material-icons {
     font-size: 24px;
-    
     cursor: pointer;
-    
-    
     transition: color 0.4s ease;
-    
-
 }
 
-.cont-carrello {
+.cont-icone {
     position: relative;
 }
 
@@ -124,32 +116,103 @@
     transform: translateX(-50%);
     background-color: grey;
     color: black;
-    width: 240px;
-    padding:20px;
+    width: 200px;
+    padding: 20px;
     height: auto;
     border: 3px solid #9d9d9d;
-    border-radius: 10px;
+    border-radius: 5px;
     z-index: 1000;
     text-align: center;
-
 }
 
-.cont-carrello:hover .carrello-anteprima {
-    color:#000000;
+
+
+.login-anteprima {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: grey;
+    color: black;
+    width: 100px;
+    padding: 5px;
+    height: auto;
+    border: 3px solid #9d9d9d;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
 }
 
-.cont-carrello:hover .carrello-anteprima {
+.lingue-anteprima {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: grey;
+    color: black;
+    width: 100px;
+    padding: 5px;
+    height: auto;
+    border: 3px solid #9d9d9d;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+
+
+.login-anteprima>p {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.lingue-anteprima>p {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.cont-icone:hover .carrello-anteprima {
+    color: #000000;
     display: block;
+}
 
+.cont-icone:hover .login-anteprima {
+    color: #000000;
+    display: block;
+}
+
+.cont-icone:hover .lingue-anteprima {
+    color: #000000;
+    display: block;
 }
 
 .carrello-anteprima::before {
     content: '';
     position: absolute;
-    top: -10px;
+    top: -50px;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 50px;
+}
+
+.login-anteprima::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.lingue-anteprima::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
 }
 
 .navbar .material-icons {
@@ -202,18 +265,20 @@
 
 .logo-section {
     background-color: #000000;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
     min-height: 60vh;
+    border-top: 2px solid #1c1c1c;
 }
 
 .logo-body {
-    width: 60%; /* Dimensione più grande per il logo centrale */
-    filter:invert(1);
-    height:auto;
+    width: 60%;
+    /* Dimensione più grande per il logo centrale */
+    filter: invert(1);
+    height: auto;
 
 }
 
@@ -226,6 +291,8 @@
     padding: 40px 20px;
     color: white;
     background-color: rgb(0, 0, 0);
+    border-top: 2px solid #1c1c1c;
+    border-bottom: 2px solid #1c1c1c;
 }
 
 /*Messagggio*/
@@ -264,6 +331,8 @@
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.5;
     max-width: 700px;
+    border-top: 2px solid #1c1c1c;
+    padding-top: 20px;
 }
 
 /* ── Bottone Iscriviti ── */
@@ -274,7 +343,7 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s;
-}
+}   
 
 .Messaggio-btn:hover {
     color: #ffffff;
@@ -285,6 +354,7 @@
     background: #000000;
     color: #ffffff;
     padding: 60px 48px;
+    border-top: 2px solid #1c1c1c;
 }
 
 .footer-grid {
@@ -389,6 +459,13 @@
 
 .footer-link-underline:hover {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo {
+    width: 300px;
+    height: auto;
+    margin-top: 40px;
+    margin-left: -115px;
 }
 
 /*fine del FOOTER*/
