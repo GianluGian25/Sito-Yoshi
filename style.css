@@ -7,7 +7,6 @@
 
 
 
-/*Per le diverse pagine*/
 .Sfondo {
     background-color: rgb(0, 0, 0);
     background-size: cover;
@@ -104,11 +103,16 @@
 .material-icons {
     font-size: 24px;
     cursor: pointer;
+    display:inline-block;
     transition: color 0.4s ease;
 }
 
 .cont-icone {
     position: relative;
+}
+
+.cont-icone:hover .material-icons {
+    transform: translateY(-4px);
 }
 
 
@@ -167,7 +171,6 @@
     z-index: 1000;
     text-align: center;
 }
-
 
 
 .login-anteprima > ul > li > a {
@@ -247,16 +250,7 @@
 }
 
 
-/*.contenitore-prova {
-    border: 2px solid white;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    margin: 20px;
-    text-align: center;
-}
-*/
+
 .contenitore-prova p {
     color: white;
     font-family: 'montserrat', sans-serif;
@@ -288,7 +282,6 @@
 
 .logo-body {
     width: 60%;
-    /* Dimensione più grande per il logo centrale */
     filter: invert(1);
     height: auto;
 
@@ -303,8 +296,8 @@
     padding: 40px 20px;
     color: white;
     background-color: rgb(0, 0, 0);
-    border-top: 2px solid #1c1c1c;
-    border-bottom: 2px solid #1c1c1c;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 /*Messagggio*/
@@ -327,7 +320,6 @@
     gap: 28px;
 }
 
-/* ── Piccola scritta in alto ── */
 .Messaggio-label {
     font-size: 11px;
     font-weight: 700;
@@ -336,7 +328,6 @@
     text-transform: uppercase;
 }
 
-/* ── Testo grande centrale ── */
 .Messaggio-testo {
     font-size: 28px;
     font-weight: 400;
@@ -347,7 +338,6 @@
     padding-top: 20px;
 }
 
-/* ── Bottone Iscriviti ── */
 .Messaggio-btn {
     font-size: 13px;
     letter-spacing: 1.5px;
@@ -408,7 +398,6 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* ── Input con freccia ── */
 .footer-input-row {
     display: flex;
     align-items: center;
@@ -436,7 +425,6 @@
     cursor: pointer;
 }
 
-/* ── Testo descrittivo ── */
 .footer-desc {
     font-size: 13px;
     color: rgb(255, 255, 255);
@@ -444,7 +432,6 @@
     margin-bottom: 16px;
 }
 
-/* ── Select lingua ── */
 .footer-select {
     background: transparent;
     border: none;
@@ -461,7 +448,6 @@
     color: #ffffff;
 }
 
-/* ── Link con sottolineatura (Italia) ── */
 .footer-link-underline {
     color: #ffffff;
     font-size: 14px;
@@ -486,7 +472,6 @@
     background: #000;
 }
 
-/* Titolo header */
 .storia-header {
     padding: 90px 48px 40px;
     text-align: center;
@@ -501,14 +486,12 @@
     text-transform: uppercase;
 }
 
-/* Colonna orizzontale di testo  */
 .storia-contenuto {
     max-width: 660px;
     margin: 0 auto;
     padding: 72px 32px 100px;
 }
 
-/*  frase apertura */
 .storia-apertura {
     font-size: 15px;
     font-weight: 300;
@@ -523,7 +506,6 @@
     font-weight: 400;
 }
 
-/* paragrafi  */
 .storia-testo {
     font-size: 14px;
     font-weight: 300;
@@ -533,7 +515,6 @@
     letter-spacing: 0.01em;
 }
 
-/* Frasi importanti in grndee */
 .storia-frase {
     font-size: clamp(18px, 2.6vw, 26px);
     font-weight: 400;
@@ -545,7 +526,6 @@
     letter-spacing: 0.02em;
 }
 
-/* Linea orizzontale per dividere */
 .storia-linea {
     border: none;
     border-top: 1px solid #1c1c1c;
