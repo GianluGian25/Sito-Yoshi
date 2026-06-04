@@ -5,22 +5,29 @@
     background-color: black;
 }
 .header{
-    font-size: 45px ;          
-    text-align: center;       
-    margin-top: 40px;        
-    margin-bottom: 15px; 
-    font-family: Georgia, serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-    color: white;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    font-family: futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .body {
     font-size: 20px ;          
     text-align: center;       
     margin-top: 40px;        
     margin-bottom: 15px; 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     color: white;
     
+}
+
+.sottotitolo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
 }
 .contenitore-box {
     display: flex;
@@ -41,8 +48,9 @@
     text-align: center;       
     margin-top: 40px;        
     margin-bottom: 15px;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
 }
 .box2 {
     width: 500px;
@@ -56,8 +64,9 @@
     text-align: center;       
     margin-top: 40px;        
     margin-bottom: 15px;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
 }
 .box3 {
     width: 500px;
@@ -71,8 +80,9 @@
     text-align: center;       
     margin-top: 40px;        
     margin-bottom: 15px;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
 }
 .box4 {
     width: 500px;
@@ -86,6 +96,13 @@
     text-align: center;       
     margin-top: 40px;        
     margin-bottom: 15px;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: white;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
 }
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+    border-color: #555252;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    }
